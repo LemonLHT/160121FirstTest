@@ -1,0 +1,18 @@
+0129 16:51:26 125 <StarFileHandler> new roll file!
+0129 16:51:26 125 dbc
+0129 16:51:26 125 
+0129 16:51:26 156 driverName: ORACLE10,driverType: ORACLE
+0129 16:51:26 156 Connect: host is 212, username is bill_ct 
+0129 16:51:26 156 [0000] _oracleConnect
+0129 16:51:26 734 [0000] _oracleConnect ok, 0x0 
+0129 16:51:26 734 [XXXX] requestQueryConnection()
+0129 16:51:26 734 [0000] requestQueryConnnection, return 0x00cb21c0
+0129 16:51:33 812 driverName: ORACLE10,driverType: ORACLE
+0129 16:51:36 484 Connect: host is xy212, username is sa 
+0129 16:51:36 484 [0000] _oracleConnect
+0129 16:51:40 984 [0000] Logon : ORA-12154: TNS: 无法解析指定的连接标识符
+
+0129 17:00:12 937 releaseQueryConnection,numhandles=2
+0129 17:00:12 937 disconnect()
+0129 17:00:17 937 [0000] _oracleDisconnect
+0129 17:01:47 453 <StarFileHandler> file roll!

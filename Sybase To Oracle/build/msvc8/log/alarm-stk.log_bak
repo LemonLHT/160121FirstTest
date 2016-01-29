@@ -1,0 +1,7 @@
+0129 19:12:26 531 <StarFileHandler> new roll file!
+0129 19:12:26 531 [0001] CNT: server(127.0.0.1:2007), local port(0)
+0129 19:12:27 609 [0001] CNT: failed
+0129 19:12:28  93 [0001] WARN: not connected
+0129 19:12:35 906 [0001] WARN: not connected
+0129 19:21:51 328 [0001] WARN: not connected
+0129 19:22:01 671 <StarFileHandler> file roll!

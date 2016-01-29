@@ -1,0 +1,25 @@
+0129 19:11:58 234 <StarFileHandler> new roll file!
+0129 19:11:58 234 dbc
+0129 19:11:58 234 
+0129 19:11:58 234 driverName: ODBC,driverType: RDMS
+0129 19:11:58 234 connect()
+0129 19:11:58 234 [0000] _odbcConnec
+0129 19:11:58 734 requestQueryConnection()
+0129 19:11:58 734 requestQueryConnection, return 0x00c824a0
+0129 19:11:58 734 driverName: ODBC,driverType: RDMS
+0129 19:11:58 734 connect()
+0129 19:11:58 734 [0000] _odbcConnec
+0129 19:11:58 765 requestQueryConnection()
+0129 19:11:58 765 requestQueryConnection, return 0x00c82bd8
+0129 19:12:00  46 [0000] command(select t.column_name,t.data_type,t.column_id  FROM user_tab_cols t,user_col_comments c WHERE lower(t.table_name) = 'aaa_black_caller' and c.table_name = t.table_name and c.column_name = t.column_name and t.hidden_column = 'NO' order by t.column_id)
+0129 19:12:00  46 [0000] execute
+0129 19:12:10 671 [0000] command(select  BR_CALLER  ,  BR_TYPE  ,  BR_DESCRIPTION  ,  convert(varchar(20),BR_UPDATETIME,20)  ,  BR_RESERVED  from aaa_black_caller)
+0129 19:12:10 671 [0000] execute
+0129 19:12:10 687 [0000] SQLExecute [DataDirect][ODBC Sybase Wire Protocol driver][SQL Server]aaa_black_caller not found. Specify owner.objectname or use sp_help to check whether the object exists (sp_help may produce lots of output).
+
+0129 19:12:10 687 releaseQueryConnection
+0129 19:12:10 687 releaseQueryConnection
+0129 19:12:10 687 disconnect()
+0129 19:12:10 687 [0000] _odbcDisconnect
+0129 19:12:10 703 disconnect()
+0129 19:12:27 625 <StarFileHandler> file roll!

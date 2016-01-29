@@ -1,0 +1,9 @@
+0129 18:13:04 62 <StarFileHandler> new roll file!
+0129 18:13:04  62 dbc
+0129 18:13:04  62 
+0129 18:13:04  62 driverName: ORACLE10,driverType: ORACLE
+0129 18:13:06 765 Connect: host is xy212, username is sa 
+0129 18:13:06 765 [0000] _oracleConnect
+0129 18:13:11 578 [0000] Logon : ORA-12154: TNS: 无法解析指定的连接标识符
+
+0129 18:30:25 203 <StarFileHandler> file roll!

@@ -1,0 +1,26 @@
+0129 19:06:46 734 <StarFileHandler> new roll file!
+0129 19:06:46 734 dbc
+0129 19:06:46 734 
+0129 19:06:46 734 driverName: ODBC,driverType: RDMS
+0129 19:06:46 734 connect()
+0129 19:06:46 734 [0000] _odbcConnec
+0129 19:06:47 156 requestQueryConnection()
+0129 19:06:47 156 requestQueryConnection, return 0x00c824a0
+0129 19:06:47 156 driverName: ODBC,driverType: RDMS
+0129 19:06:47 156 connect()
+0129 19:06:47 156 [0000] _odbcConnec
+0129 19:06:47 187 requestQueryConnection()
+0129 19:06:47 187 requestQueryConnection, return 0x00c82bd8
+0129 19:06:49  62 [0000] command(select t.column_name,t.data_type,t.column_id  FROM user_tab_cols t,user_col_comments c WHERE lower(t.table_name) = 'aaa_black_caller' and c.table_name = t.table_name and c.column_name = t.column_name and t.hidden_column = 'NO' order by t.column_id)
+0129 19:06:49  62 [0000] execute
+0129 19:07:17 453 [0000] command(select  BR_CALLER  ,  BR_TYPE  ,  BR_DESCRIPTION  ,  convert(varchar(20),(null),20)  ,  from aaa_black_caller)
+0129 19:07:17 453 [0000] execute
+0129 19:07:17 515 [0000] SQLExecute [DataDirect][ODBC Sybase Wire Protocol driver][SQL Server]Incorrect syntax near the keyword 'from'.
+
+0129 19:07:17 515 releaseQueryConnection
+0129 19:07:17 515 releaseQueryConnection
+0129 19:07:17 515 disconnect()
+0129 19:07:17 515 [0000] _odbcDisconnect
+0129 19:07:17 531 disconnect()
+0129 19:07:22 531 [0000] _odbcDisconnect
+0129 19:07:43 359 <StarFileHandler> file roll!

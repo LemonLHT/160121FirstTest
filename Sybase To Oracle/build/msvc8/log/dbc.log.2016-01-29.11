@@ -1,0 +1,14 @@
+0129 18:46:52 406 <StarFileHandler> new roll file!
+0129 18:46:52 406 dbc
+0129 18:46:52 406 
+0129 18:46:52 421 driverName: ODBC,driverType: RDMS
+0129 18:46:53  62 connect()
+0129 18:46:53  62 [0000] _odbcConnec
+0129 18:46:58 390 requestQueryConnection()
+0129 18:46:58 390 requestQueryConnection, return 0x00c824a0
+0129 18:47:03 968 driverName: ODBC,driverType: RDMS
+0129 18:47:05 406 connect()
+0129 18:47:05 406 [0000] _odbcConnec
+0129 18:47:19 312 requestQueryConnection()
+0129 18:47:19 312 requestQueryConnection, return 0x00c82bd8
+0129 18:50:03 562 <StarFileHandler> file roll!

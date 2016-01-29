@@ -1,0 +1,8 @@
+0129 18:32:41 0 <StarFileHandler> new roll file!
+0129 18:32:41   0 dbc
+0129 18:32:41   0 
+0129 18:32:41   0 driverName: ORACLE10,driverType: ORACLE
+0129 18:32:42 328 Connect: host is 212, username is bill_ct 
+0129 18:32:42 328 [0000] _oracleConnect
+0129 18:32:42 890 [0000] _oracleConnect ok, 0x0 
+0129 18:33:36 250 <StarFileHandler> file roll!
