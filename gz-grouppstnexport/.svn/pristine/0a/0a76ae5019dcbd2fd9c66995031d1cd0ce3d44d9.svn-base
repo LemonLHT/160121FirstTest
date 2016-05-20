@@ -1,0 +1,108 @@
+本模块目的为支持多省对集团话单的采集处理
+通过配置加脚本的方式实现
+
+一、贵州固网
+-----------------------------------------------------------
+1. gz-grouppstnexport.conf 中重要配置
+[System]
+#lua文件路径
+luafilepath = ./lua/gz-pstn-export.lua
+
+[PSTN]
+#月话单压缩包解压后源文件所在路径  
+StoreFilePath=E:\temp\ftplocal\download\monthbilling
+
+#解析并处理完所有源文件后，输出文件所在路径
+OutputPath=E:\temp\ftplocal\output\pstn
+
+#话单备份路径
+BakUpPath=E:\temp\ftplocal\bakup\pstn
+-----------------------------------------------------------
+2. work\lua\gz-pstn-export.lua 脚本中的重要内容(目前的lua脚本专门支持贵州固网，不用修改)
+
+1). 话单账目项
+ACCOUNT_NO = '1002370'
+
+2). 剔除主叫号码文件固定为
+	work\removecallers\removecallers.txt
+	
+3). 行数据的解析由 HandleLine 执行
+
+4). 输出到一个文件还是多个文件， 由 GetOutputFileName 函数确定
+
+5). 输出文件名由 GetOutputFileName 函数确定
+
+
+-----------------------------------------------------------
+二、贵州c网(周期性、文件需要逐行解析)
+TODO:
+-----------------------------------------------------------
+
+
+-----------------------------------------------------------
+三、福建固、c网(准实时详单，不用逐行处理)
+-----------------------------------------------------------
+1. gz-grouppstnexport.conf 中重要配置
+[System]
+#扫描集团话单FTP间隔 单位:分钟
+ScanInterval = 0.1
+
+#lua文件路径
+luafilepath = ./lua/fj-group-export.lua
+
+#处理详单还是月汇总话单 1:详单(按照时间间隔周期执行) 2:月汇总话单(默认值，程序启动时只执行一次)
+BillType = 1
+
+#集团FTP配置
+[GroupFtpConf]
+FtpServer = 127.0.0.1
+FtpPort = 21
+FTPUser = test
+FTPPassword = test
+#远程文件存放路径
+DownloadPath = /
+
+#上传话单到省IT计费FTP地址相关配置(福建需要上传ftp)
+[ITFtpConf]
+FtpServer = 127.0.0.1
+FtpPort = 21
+FTPUser = test
+FTPPassword = test
+
+[CDMA]
+#c网话单下载后本地存放路径
+StoreFilePath=E:\temp\ftplocal\download\cdma
+
+#话单备份路径
+BakUpPath=E:\temp\ftplocal\bakup\cdma
+
+#c网话单上传到省IT的子目录
+;SubDir = itdir/cdma
+
+#是否需要逐行处理源文件 0:不需要 1:需要(默认)
+NeedHandleLineByLine = 0
+
+#对输出文件的处理 1:拷贝到OutputPath指定路径 2:上传ftp 3:同时拷贝和上传ftp
+OutputDestinationType = 2
+
+[PSTN]
+#固网话单下载后本地存放路径
+StoreFilePath=E:\temp\ftplocal\download\pstn
+
+#话单备份路径
+BakUpPath=E:\temp\ftplocal\bakup\pstn
+
+#固网话单上传到省IT的子目录
+;SubDir = itdir/pstn
+
+#是否需要逐行处理源文件 0:不需要 1:需要(默认)
+NeedHandleLineByLine = 0
+
+#对输出文件的处理 1:拷贝到OutputPath指定路径 2:上传ftp 3:同时拷贝和上传ftp
+OutputDestinationType = 2
+
+[CityConf]
+;欲下载话单的区号列表
+CityCode.1 = 871
+-----------------------------------------------------------
+2. work\lua\fj-group-export.lua 脚本中的重要内容(福建这种不需要逐行解析的，就根本不需要lua脚本，但目前代码在启动时必须加载lua，所以写一个空的lua文件即可)

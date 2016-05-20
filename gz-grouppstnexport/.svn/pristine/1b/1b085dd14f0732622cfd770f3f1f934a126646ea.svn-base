@@ -1,0 +1,103 @@
+ReleaseNote说明 
+产品名称:福建集团话单出账
+模块名称:fj-groupbillexport
+发布版本:CTI_FujianGroupBillExport_V1.0.3_20150602
+研发人:  田伟
+定版日期:20150602
+使用范围:福建省平台
+编译环境:vs2005+win7
+配置变更:	
+功能变更:
+1. 从集团抓取的话单中不包括扩展名为.tmp的文件
+2. 修正bug: 当下载集团的tmp文件不存在时，会导致程序死循环，并且不会继续取集团话单
+增加功能:
+备　　注:
+
+ 
+============================================================
+ReleaseNote说明 
+产品名称:福建集团话单出账
+模块名称:fj-groupbillexport
+发布版本:CTI_FujianGroupBillExport_V1.0.1_20141201
+研发人:  田伟
+定版日期:20141201
+使用范围:福建省平台
+编译环境:vs2005+win7
+配置变更:
+	fj-groupbillexport.conf
+	#上传话单到省IT计费FTP地址相关配置
+	[ITFtpConf]
+	FtpServer = 127.0.0.1
+	FtpPort = 21
+	FTPUser = test
+	FTPPassword = test
+	
+	[CDMA]
+	#c网话单上传到省IT的子目录
+	SubDir = itdir/cdma
+
+	[PSTN]
+	#固网话单上传到省IT的子目录
+	SubDir = itdir/pstn
+	
+功能变更:
+增加功能:
+	1.从集团FTP下载到本地的话单文件，自动上传到指定的FTP目录下
+备　　注:
+
+ 
+============================================================
+ReleaseNote说明 
+产品名称:福建集团话单出账
+模块名称:fj-groupbillexport
+发布版本:CTI_FujianGroupBillExport_V1.0.0_20141020
+研发人:  田伟
+定版日期:20141020
+使用范围:福建省平台
+编译环境:vs2005+win7
+配置变更:
+	fj-groupbillexport.conf
+	[System]
+	#扫描集团话单FTP间隔 单位:分钟
+	ScanInterval = 5 
+	
+	[FtpConf]
+	FtpServer = 127.0.0.1
+	FtpPort = 21
+	FTPUser = test
+	FTPPassword = test
+	
+	#远程文件存放路径
+	DownloadPath = /
+	
+	[CDMA]
+	#c网话单下载后本地存放路径
+	StoreFilePath=.\groupbill_local\download\cdma
+	
+	#供省IT获取话单路径
+	UpPath=.\groupbill_local\up\cdma
+	
+	#话单备份路径
+	BakUpPath=.\groupbill_local\bakup\cdma
+	
+	[PSTN]
+	#固网话单下载后本地存放路径
+	StoreFilePath=.\groupbill_local\download\pstn 
+	
+	#供省IT获取话单路径
+	UpPath=.\groupbill_local\up\pstn
+	
+	#话单备份路径
+	BakUpPath=.\groupbill_local\bakup\pstn
+	
+	[CityConf]
+	;欲下载话单的区号列表
+	CityCode.1 = 591
+	CityCode.2 = 592
+功能变更:
+	增加功能:
+	1. 从电信集团FTP下载固网和c网话单，根据配置，存放到各自指定上传目录及备份目录中，并删除集团FTP上的源话单文件
+增加功能:
+备　　注:
+
+ 
