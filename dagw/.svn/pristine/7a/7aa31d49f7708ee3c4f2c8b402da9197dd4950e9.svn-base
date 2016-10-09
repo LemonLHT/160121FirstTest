@@ -1,0 +1,31 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual C++ Express 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dagw_oracle", "dagw_oracle.vcproj", "{19432B47-10F6-4D8E-AF33-E3AB59A5FCCD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "oagw", "oagw.vcproj", "{DA398A65-A8D2-4169-9013-DDDFFFA2119B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dagw", "dagw.vcproj", "{DA398A65-A8D2-4169-9013-DDDFFFA2119A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19432B47-10F6-4D8E-AF33-E3AB59A5FCCD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{19432B47-10F6-4D8E-AF33-E3AB59A5FCCD}.Debug|Win32.Build.0 = Debug|Win32
+		{19432B47-10F6-4D8E-AF33-E3AB59A5FCCD}.Release|Win32.ActiveCfg = Release|Win32
+		{19432B47-10F6-4D8E-AF33-E3AB59A5FCCD}.Release|Win32.Build.0 = Release|Win32
+		{DA398A65-A8D2-4169-9013-DDDFFFA2119B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DA398A65-A8D2-4169-9013-DDDFFFA2119B}.Debug|Win32.Build.0 = Debug|Win32
+		{DA398A65-A8D2-4169-9013-DDDFFFA2119B}.Release|Win32.ActiveCfg = Release|Win32
+		{DA398A65-A8D2-4169-9013-DDDFFFA2119B}.Release|Win32.Build.0 = Release|Win32
+		{DA398A65-A8D2-4169-9013-DDDFFFA2119A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DA398A65-A8D2-4169-9013-DDDFFFA2119A}.Debug|Win32.Build.0 = Debug|Win32
+		{DA398A65-A8D2-4169-9013-DDDFFFA2119A}.Release|Win32.ActiveCfg = Release|Win32
+		{DA398A65-A8D2-4169-9013-DDDFFFA2119A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

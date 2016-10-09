@@ -1,0 +1,24 @@
+产品名称：数据库网关
+模块名称：dagw
+发布版本：CTI_dagw2.1.0_20140509
+定版日期：2014/05/09
+使用范围：通用版本
+编译环境：vs 2005+windows2003
+配置变更：
+
+[procedures]
+query = exec proc_dagw_mpquery #查询包月
+regmonth = exec proc_dagw_mpreg#包月订购
+unregmonth = exec proc_dagw_mpunreg#包月退订
+
+功能变更：
+1、增加向httpserver模块注册即接口；
+2、增加和httpserver模块消息交互接口，用以实现包月查询，包月订购，包月退订。
+
+依赖对象：
+sybase数据库
+
+备　　注：
+
+
+
